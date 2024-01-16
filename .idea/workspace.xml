@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db24be6e-7baf-4062-a90c-cfb26173d626" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/multithreading/CompletableFeatureDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/multithreading/CompletableFeatureDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stream/StreamDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stream/StreamDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +129,7 @@
       <workItem from="1705041423850" duration="1916000" />
       <workItem from="1705285754893" duration="12726000" />
       <workItem from="1705373590475" duration="738000" />
+      <workItem from="1705388421873" duration="969000" />
     </task>
     <servers />
   </component>

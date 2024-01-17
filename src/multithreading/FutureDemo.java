@@ -5,14 +5,9 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 import java.util.logging.Logger;
 
+import static common.KotlinUtils.with;
+
 public class FutureDemo {
-    public interface WithInterface<T> {
-        void call(T obj);
-    }
-    public static <T> T with(T obj, WithInterface<T> callable) {
-        callable.call(obj);
-        return obj;
-    }
     public static void main(String[] args) {
         Callable<Integer> task = () -> {
             int ans = 0;

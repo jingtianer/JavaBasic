@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db24be6e-7baf-4062-a90c-cfb26173d626" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/common/KotlinUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/io/ZipDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/multithreading/FutureDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/multithreading/FutureDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stream/OptionalDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stream/OptionalDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stream/StreamDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stream/StreamDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +42,6 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Jingtian/桌面/学习/java/JavaBasic&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -47,26 +51,13 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.StreamDemo">
-    <configuration name="CompletableFeatureDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="multithreading.CompletableFeatureDemo" />
+  <component name="RunManager" selected="Application.ZipDemo">
+    <configuration name="GenericDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="genericDemo.GenericDemo" />
       <module name="JavaBasic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="multithreading.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KollectionDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="kollection.KollectionDemo" />
-      <module name="JavaBasic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kollection.*" />
+          <option name="PATTERN" value="genericDemo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -87,10 +78,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StreamDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stream.StreamDemo" />
+    <configuration name="OptionalDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stream.OptionalDemo" />
       <module name="JavaBasic" />
-      <option name="PROGRAM_PARAMETERS" value="E:\Jingtian\桌面\学习\java\JavaBasic\src\stream\StreamDemo.java E:\Jingtian\jingtianer" />
+      <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/src/stream/OptionalDemo.java" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="stream.*" />
@@ -101,17 +92,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StreamDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stream.StreamDemo" />
+      <module name="JavaBasic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stream.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZipDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.ZipDemo" />
+      <module name="JavaBasic" />
+      <option name="PROGRAM_PARAMETERS" value="c $USER_HOME$/Downloads/testout.zip $USER_HOME$/Downloads/siyuansongti_downcc &quot;$USER_HOME$/Downloads/Effective J ava中文版(原书第3版) (Joshua Bloch) (Z-Library).pdf&quot; $USER_HOME$/Downloads/_Java并发编程实战_12928301_Z.pdf $USER_HOME$/Downloads/JAVA多线编程核心技术扫描.pdf $USER_HOME$/Downloads/Java多线程编程核心技术.pdf $USER_HOME$/Downloads/com.microsoft.office.licensingv2.plist $USER_HOME$/Downloads/sogou_mac_614d.zip" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.CompletableFeatureDemo" />
-      <item itemvalue="Application.KollectionDemo" />
-      <item itemvalue="Application.LookupDemo" />
+      <item itemvalue="Application.ZipDemo" />
       <item itemvalue="Application.StreamDemo" />
+      <item itemvalue="Application.GenericDemo" />
+      <item itemvalue="Application.LookupDemo" />
+      <item itemvalue="Application.OptionalDemo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ZipDemo" />
         <item itemvalue="Application.StreamDemo" />
-        <item itemvalue="Application.CompletableFeatureDemo" />
-        <item itemvalue="Application.KollectionDemo" />
+        <item itemvalue="Application.OptionalDemo" />
+        <item itemvalue="Application.GenericDemo" />
         <item itemvalue="Application.LookupDemo" />
       </list>
     </recent_temporary>
@@ -124,12 +144,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1704959404181</updated>
-      <workItem from="1704959405293" duration="1404000" />
-      <workItem from="1705025907783" duration="5488000" />
-      <workItem from="1705041423850" duration="1916000" />
-      <workItem from="1705285754893" duration="12726000" />
-      <workItem from="1705373590475" duration="738000" />
-      <workItem from="1705388421873" duration="969000" />
+      <workItem from="1704959405293" duration="2726000" />
+      <workItem from="1704963105741" duration="262000" />
+      <workItem from="1705388302743" duration="279000" />
+      <workItem from="1705389043209" duration="3046000" />
+      <workItem from="1705394723228" duration="2729000" />
+      <workItem from="1705455451070" duration="3749000" />
+      <workItem from="1705473012103" duration="9223000" />
     </task>
     <servers />
   </component>

@@ -18,6 +18,8 @@ import java.util.logging.Logger;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
+import static common.KotlinUtils.dfs;
+
 public class StreamDemo {
     private static <T> T with(T val, Consumer<T> consumer) {
         if (val != null) {
@@ -26,14 +28,6 @@ public class StreamDemo {
         return val;
     }
     final static Logger logger = Logger.getLogger(StreamDemo.class.getName());
-    private static <T> void dfs(T val, Function<T, Stream<T>> f) {
-        with(f.apply(val), (stream) -> {
-            stream.forEach(sub -> {
-                System.out.println(sub);
-                dfs(sub, f);
-            });
-        });
-    }
     public static void main(String[] args) {
         if(args.length < 2) return;
         Path path = Path.of(args[0]);

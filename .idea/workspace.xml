@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db24be6e-7baf-4062-a90c-cfb26173d626" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/io/FilePathDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NumberDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/ZipDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/ZipDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stream/StreamDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stream/StreamDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.FilePathDemo">
+  <component name="RunManager" selected="Application.NumberDemo">
     <configuration name="FilePathDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.FilePathDemo" />
       <module name="JavaBasic" />
@@ -64,15 +62,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GenericDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="genericDemo.GenericDemo" />
+    <configuration name="NumberDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NumberDemo" />
       <module name="JavaBasic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="genericDemo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -135,19 +127,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.ZipDemo (1)" />
+      <item itemvalue="Application.NumberDemo" />
       <item itemvalue="Application.FilePathDemo" />
       <item itemvalue="Application.ZipDemo" />
       <item itemvalue="Application.StreamDemo" />
-      <item itemvalue="Application.GenericDemo" />
       <item itemvalue="Application.OptionalDemo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NumberDemo" />
         <item itemvalue="Application.FilePathDemo" />
         <item itemvalue="Application.ZipDemo" />
         <item itemvalue="Application.StreamDemo" />
         <item itemvalue="Application.OptionalDemo" />
-        <item itemvalue="Application.GenericDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -168,6 +160,8 @@
       <workItem from="1705473012103" duration="9223000" />
       <workItem from="1705510991390" duration="208000" />
       <workItem from="1705560228539" duration="8581000" />
+      <workItem from="1705569287392" duration="47000" />
+      <workItem from="1705581599165" duration="3410000" />
     </task>
     <servers />
   </component>

@@ -2,6 +2,7 @@ package stream;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.io.PrintStream;
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -21,12 +22,6 @@ import java.util.stream.StreamSupport;
 import static common.KotlinUtils.dfs;
 
 public class StreamDemo {
-    private static <T> T with(T val, Consumer<T> consumer) {
-        if (val != null) {
-            consumer.accept(val);
-        }
-        return val;
-    }
     final static Logger logger = Logger.getLogger(StreamDemo.class.getName());
     public static void main(String[] args) {
         if(args.length < 2) return;
@@ -41,6 +36,7 @@ public class StreamDemo {
                 var rootDir = FileSystems.getDefault().getRootDirectories();
                 return StreamSupport.stream(rootDir.spliterator(), true);
             } else {
+                System.out.println(dir);
                 var files = dir.toFile().listFiles();
                 if(files != null) {
                     return StreamSupport.stream(

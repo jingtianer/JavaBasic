@@ -124,7 +124,7 @@ public class ZipDemo {
     }
     static void usage() {
         logger.log(Level.SEVERE,
-                String.format("Usage:\nCompress:\n\tjava %s c outfile fileList\nExtract:\n\tjava %s x outputDir zipFile"
+                String.format("\nUsage:\nCompress:\n\tjava %s c outfile fileList\nExtract:\n\tjava %s x outputDir zipFile"
                 , ZipDemo.class.getName()
                 , ZipDemo.class.getName()));
     }

@@ -30,6 +30,19 @@ public class ClassLoaderTest {
                     }
                 });
             }
+            try (var fileStream = Files.walk(Path.of("/Users/jingtian/IdeaProjects/java/JavaBasic/target/classes/classLoaderDemo"))) {
+                fileStream.forEach(classFile-> {
+                    switch (classFile.getFileName().toString()) {
+                        case "ClassLoaderTestFile.class":
+                        case "TestClass.class":
+                            try {
+                                Files.delete(classFile);
+                            } catch (IOException e) {
+                                throw new RuntimeException(e);
+                            }
+                    }
+                });
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

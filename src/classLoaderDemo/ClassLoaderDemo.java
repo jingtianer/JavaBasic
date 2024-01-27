@@ -85,8 +85,10 @@ class ECBClassloader extends ClassLoader {
         searchPath.add(path);
         return this;
     }
+
     @Override
-    protected Class<?> findClass(String name) throws ClassNotFoundException {
+    protected Class<?> findClass(String name) {
+        System.out.println(getClass() + " is loading: " + name);
         try {
             Path clazzFile = searchPath.stream()
                     .map(path->Path.of(path, name.replace(".", "/") + ".ecb_class"))
@@ -143,9 +145,16 @@ public class ClassLoaderDemo {
         }
     }
     public static void loadClass(String clazzName, String searchPath, String key, Object[] args) {
-        ClassLoader classLoader = new ECBClassloader(key)
+        ECBClassloader classLoader = new ECBClassloader(key)
                 .addSearchPath(searchPath);
         try {
+            try (var walkStream = Files.walk(Path.of(searchPath))) {
+                walkStream.forEach((f)->{
+
+                });
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
             Class<?> clazz = classLoader.loadClass(clazzName);
             clazz.getMethod("main", String[].class).invoke(null, args);
         } catch (ClassNotFoundException e) {
@@ -163,6 +172,7 @@ public class ClassLoaderDemo {
         switch (args[1]) {
             case "-c":
                 compileFiles(Arrays.stream(args).skip(2).toArray(String[]::new));
+                // no break, compile, then fall through, then encryption
             case "-f":
                 encryptClassFile(Arrays.stream(args).skip(2).toArray(String[]::new), args[0]);
                 break;

@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db24be6e-7baf-4062-a90c-cfb26173d626" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/io/FilePathDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classLoaderDemo/ClassLoaderDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classLoaderDemo/ClassLoaderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classLoaderDemo/ClassLoaderTestFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/ZipDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/ZipDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stream/StreamDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stream/StreamDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,22 +35,62 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/jingtian/IdeaProjects/java/JavaBasic/src/main/java/org/example/Main.java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/jingtian/IdeaProjects/java/JavaBasic/src/main/java/org/example/Main.java",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.FilePathDemo">
+}]]></component>
+  <component name="RunManager" selected="Application.ClassLoaderTest">
+    <configuration name="ClassLoaderDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="classLoaderDemo.ClassLoaderDemo" />
+      <module name="JavaBasic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="classLoaderDemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClassLoaderTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="classLoaderDemo.ClassLoaderTest" />
+      <module name="JavaBasic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="classLoaderDemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClassLoaderTestFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="classLoaderDemo.ClassLoaderTestFile" />
+      <module name="JavaBasic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="classLoaderDemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FilePathDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.FilePathDemo" />
       <module name="JavaBasic" />
@@ -64,40 +105,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GenericDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="genericDemo.GenericDemo" />
+    <configuration name="KollectionDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kollection.KollectionDemo" />
       <module name="JavaBasic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="genericDemo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OptionalDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stream.OptionalDemo" />
-      <module name="JavaBasic" />
-      <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/src/stream/OptionalDemo.java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stream.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StreamDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stream.StreamDemo" />
-      <module name="JavaBasic" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;E:\Jingtian\桌面\学习\java\JavaBasic\src\stream\StreamDemo.java&quot; &quot;E:\Jingtian\jingtianer\影音像\g&quot;" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stream.*" />
+          <option name="PATTERN" value="kollection.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,35 +132,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ZipDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="io.ZipDemo" />
-      <module name="JavaBasic" />
-      <option name="PROGRAM_PARAMETERS" value="c &quot;E:\Jingtian\桌面\新建文件夹\meow.zip&quot; &quot;E:\Jingtian\桌面\新建文件夹\easy_java.zip&quot; &quot;E:\Jingtian\桌面\新建文件夹\Fusing Application and Audit Logs for Precise Attack Provenance without Instrumentation.pptx&quot; &quot;E:\Jingtian\桌面\新建文件夹\Privacy-Preserving_Blockchain-Based_Federated_Learning_for_IoT_Devices.pdf&quot; &quot;E:\Jingtian\桌面\新建文件夹\easy_java&quot; &quot;E:\Jingtian\桌面\新建文件夹\（备份）斯坦福数据挖掘教程第三版.pdf&quot; &quot;E:\Jingtian\桌面\新建文件夹\《鸟哥的Linux私房菜-基础篇》第四版(1).pdf&quot; &quot;E:\Jingtian\桌面\新建文件夹\Blockchain_and_Federated_Learning_for_Privacy-Preserved_Data_Sharing_in_Industrial_IoT.pdf&quot; &quot;E:\Jingtian\桌面\新建文件夹\Decentralized_Privacy_Using_Blockchain-Enabled_Federated_Learning_in_Fog_Computing.pdf&quot;" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.ZipDemo (1)" />
+      <item itemvalue="Application.ClassLoaderDemo" />
+      <item itemvalue="Application.ClassLoaderTest" />
+      <item itemvalue="Application.ClassLoaderTestFile" />
+      <item itemvalue="Application.KollectionDemo" />
       <item itemvalue="Application.FilePathDemo" />
-      <item itemvalue="Application.ZipDemo" />
-      <item itemvalue="Application.StreamDemo" />
-      <item itemvalue="Application.GenericDemo" />
-      <item itemvalue="Application.OptionalDemo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ClassLoaderTest" />
+        <item itemvalue="Application.ClassLoaderTestFile" />
+        <item itemvalue="Application.KollectionDemo" />
+        <item itemvalue="Application.ClassLoaderDemo" />
         <item itemvalue="Application.FilePathDemo" />
-        <item itemvalue="Application.ZipDemo" />
-        <item itemvalue="Application.StreamDemo" />
-        <item itemvalue="Application.OptionalDemo" />
-        <item itemvalue="Application.GenericDemo" />
       </list>
     </recent_temporary>
   </component>

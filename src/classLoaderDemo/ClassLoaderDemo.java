@@ -1,22 +1,13 @@
 package classLoaderDemo;
 
-import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 import javax.tools.JavaCompiler;
 import javax.tools.ToolProvider;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.file.*;
-import java.security.InvalidKeyException;
-import java.security.KeyPair;
-import java.security.NoSuchAlgorithmException;
-import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -36,15 +27,7 @@ class ECBUtils {
             SecretKeySpec secretKeySpec = new SecretKeySpec(key.getBytes(), ALGORITHM);
             cipher.init(Cipher.DECRYPT_MODE, secretKeySpec);
             return cipher.doFinal(code);
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
-        } catch (NoSuchPaddingException e) {
-            throw new RuntimeException(e);
-        } catch (IllegalBlockSizeException e) {
-            throw new RuntimeException(e);
-        } catch (BadPaddingException e) {
-            throw new RuntimeException(e);
-        } catch (InvalidKeyException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
@@ -56,19 +39,7 @@ class ECBUtils {
             SecretKeySpec secretKeySpec = new SecretKeySpec(key.getBytes(), ALGORITHM);
             cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
             return cipher.doFinal(bytecode);
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (NoSuchPaddingException e) {
-            throw new RuntimeException(e);
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
-        } catch (IllegalBlockSizeException e) {
-            throw new RuntimeException(e);
-        } catch (BadPaddingException e) {
-            throw new RuntimeException(e);
-        } catch (InvalidKeyException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
@@ -113,6 +84,7 @@ public class ClassLoaderDemo {
         logger.log(Level.SEVERE, String.format(
                 "Usage: \n\tjava %s secretKey -f fileName...\n\tjava %s secretKey -s string\n\tjava %s secretKey -l searchPath className args...",
                 ClassLoaderDemo.class.getName(),
+                ClassLoaderDemo.class.getName(),
                 ClassLoaderDemo.class.getName()
         ));
         System.exit(-1);
@@ -138,9 +110,7 @@ public class ClassLoaderDemo {
                 null, null, null,
                 files
         );
-        if(result == 0) {
-
-        } else {
+        if(result != 0) {
             System.exit(-2);
         }
     }
@@ -148,22 +118,12 @@ public class ClassLoaderDemo {
         ECBClassloader classLoader = new ECBClassloader(key)
                 .addSearchPath(searchPath);
         try {
-            try (var walkStream = Files.walk(Path.of(searchPath))) {
-                walkStream.forEach((f)->{
-
-                });
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
             Class<?> clazz = classLoader.loadClass(clazzName);
             clazz.getMethod("main", String[].class).invoke(null, args);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (InvocationTargetException e) {
-            throw new RuntimeException(e);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        } catch (NoSuchMethodException e) {
+        } catch (ClassNotFoundException
+                 | InvocationTargetException
+                 | IllegalAccessException
+                 | NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
     }

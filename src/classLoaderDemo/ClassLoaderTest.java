@@ -54,5 +54,19 @@ public class ClassLoaderTest {
                 "classLoaderDemo.ClassLoaderTestFile",
                 "a", "b", "c"
         });
+
+        try(var fileStream = Files.walk(Path.of("/Users/jingtian/IdeaProjects/java/JavaBasic/src/classLoaderDemo/"), 1)) {
+            fileStream.forEach(classFile->{
+                try {
+                    if (classFile.getFileName().toString().endsWith(".ecb_class")) {
+                        Files.delete(classFile);
+                    }
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

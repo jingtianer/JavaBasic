@@ -4,98 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db24be6e-7baf-4062-a90c-cfb26173d626" name="Changes" comment="">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/src/NumberDemo.java" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/src/leetcode/FizzBuzzTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/leetcode/TestDiningPhilosophers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/leetcode/TestFoo.java" afterDir="false" />
->>>>>>> 8fa1efe80149ee417cada6075a0b80b7c6251c97
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="76c8ea69-7ae1-4a19-acc3-1928f9399b65" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/leetcode/ZeroEvenOdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="2anfk9WGBIDcmpc4n4MC2PxEcBy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/jingtian/IdeaProjects/java/JavaBasic/src/main/java/org/example/Main.java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "main",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
-<<<<<<< HEAD
-  <component name="RunManager" selected="Application.NumberDemo">
-    <configuration name="FilePathDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="io.FilePathDemo" />
-=======
-  <component name="RunManager" selected="Application.TestDiningPhilosophers">
-    <configuration name="ClassLoaderTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="classLoaderDemo.ClassLoaderTest" />
->>>>>>> 8fa1efe80149ee417cada6075a0b80b7c6251c97
-      <module name="JavaBasic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="classLoaderDemo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-<<<<<<< HEAD
-    <configuration name="NumberDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="NumberDemo" />
-      <module name="JavaBasic" />
-=======
-    <configuration name="FizzBuzzTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.FizzBuzzTest" />
-      <module name="JavaBasic" />
-      <option name="PROGRAM_PARAMETERS" value="16" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
->>>>>>> 8fa1efe80149ee417cada6075a0b80b7c6251c97
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestDiningPhilosophers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.TestDiningPhilosophers" />
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.Test" />
       <module name="JavaBasic" />
       <extension name="coverage">
         <pattern>
@@ -107,113 +34,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFoo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.TestFoo" />
-      <module name="JavaBasic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestLeetCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.TestLeetCode" />
-      <module name="JavaBasic" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ZipDemo (1)" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="io.ZipDemo" />
-      <module name="JavaBasic" />
-      <option name="PROGRAM_PARAMETERS" value="x &quot;E:\Jingtian\桌面\新建文件夹\meow&quot; &quot;E:\Jingtian\桌面\新建文件夹\meow.zip&quot;" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.ZipDemo (1)" />
-<<<<<<< HEAD
-      <item itemvalue="Application.NumberDemo" />
-      <item itemvalue="Application.FilePathDemo" />
-      <item itemvalue="Application.ZipDemo" />
-      <item itemvalue="Application.StreamDemo" />
-      <item itemvalue="Application.OptionalDemo" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NumberDemo" />
-        <item itemvalue="Application.FilePathDemo" />
-        <item itemvalue="Application.ZipDemo" />
-        <item itemvalue="Application.StreamDemo" />
-        <item itemvalue="Application.OptionalDemo" />
-=======
-      <item itemvalue="Application.TestDiningPhilosophers" />
-      <item itemvalue="Application.TestFoo" />
-      <item itemvalue="Application.FizzBuzzTest" />
-      <item itemvalue="Application.TestLeetCode" />
-      <item itemvalue="Application.ClassLoaderTest" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.TestDiningPhilosophers" />
-        <item itemvalue="Application.FizzBuzzTest" />
-        <item itemvalue="Application.TestFoo" />
-        <item itemvalue="Application.TestLeetCode" />
-        <item itemvalue="Application.ClassLoaderTest" />
->>>>>>> 8fa1efe80149ee417cada6075a0b80b7c6251c97
+        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="db24be6e-7baf-4062-a90c-cfb26173d626" name="Changes" comment="" />
-      <created>1704959404181</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1704959404181</updated>
-      <workItem from="1704959405293" duration="2726000" />
-      <workItem from="1704963105741" duration="262000" />
-      <workItem from="1705388302743" duration="279000" />
-      <workItem from="1705389043209" duration="3046000" />
-      <workItem from="1705394723228" duration="2729000" />
-      <workItem from="1705455451070" duration="3749000" />
-      <workItem from="1705473012103" duration="9223000" />
-      <workItem from="1705510991390" duration="208000" />
-      <workItem from="1705560228539" duration="8581000" />
-<<<<<<< HEAD
-      <workItem from="1705569287392" duration="47000" />
-      <workItem from="1705581599165" duration="3410000" />
-=======
-      <workItem from="1709602659363" duration="5711000" />
-      <workItem from="1709619204511" duration="1305000" />
->>>>>>> 8fa1efe80149ee417cada6075a0b80b7c6251c97
-    </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

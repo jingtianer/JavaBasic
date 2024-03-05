@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db24be6e-7baf-4062-a90c-cfb26173d626" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/NumberDemo.java" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/leetcode/FizzBuzzTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/leetcode/TestDiningPhilosophers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/leetcode/TestFoo.java" afterDir="false" />
+>>>>>>> 8fa1efe80149ee417cada6075a0b80b7c6251c97
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +42,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -47,14 +54,19 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Application.NumberDemo">
     <configuration name="FilePathDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.FilePathDemo" />
+=======
+  <component name="RunManager" selected="Application.TestDiningPhilosophers">
+    <configuration name="ClassLoaderTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="classLoaderDemo.ClassLoaderTest" />
+>>>>>>> 8fa1efe80149ee417cada6075a0b80b7c6251c97
       <module name="JavaBasic" />
-      <option name="PROGRAM_PARAMETERS" value="showzip &quot;E:\Jingtian\term78\apache-tomcat-8.5.72.zip&quot;" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.*" />
+          <option name="PATTERN" value="classLoaderDemo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -62,20 +74,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="NumberDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="NumberDemo" />
       <module name="JavaBasic" />
+=======
+    <configuration name="FizzBuzzTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.FizzBuzzTest" />
+      <module name="JavaBasic" />
+      <option name="PROGRAM_PARAMETERS" value="16" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+>>>>>>> 8fa1efe80149ee417cada6075a0b80b7c6251c97
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OptionalDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stream.OptionalDemo" />
+    <configuration name="TestDiningPhilosophers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.TestDiningPhilosophers" />
       <module name="JavaBasic" />
-      <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/src/stream/OptionalDemo.java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stream.*" />
+          <option name="PATTERN" value="leetcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -83,16 +107,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StreamDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stream.StreamDemo" />
+    <configuration name="TestFoo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.TestFoo" />
       <module name="JavaBasic" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;E:\Jingtian\桌面\学习\java\JavaBasic\src\stream\StreamDemo.java&quot; &quot;E:\Jingtian\jingtianer\影音像\g&quot;" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stream.*" />
+          <option name="PATTERN" value="leetcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestLeetCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.TestLeetCode" />
+      <module name="JavaBasic" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -111,22 +141,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ZipDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="io.ZipDemo" />
-      <module name="JavaBasic" />
-      <option name="PROGRAM_PARAMETERS" value="c &quot;E:\Jingtian\桌面\新建文件夹\meow.zip&quot; &quot;E:\Jingtian\桌面\新建文件夹\easy_java.zip&quot; &quot;E:\Jingtian\桌面\新建文件夹\Fusing Application and Audit Logs for Precise Attack Provenance without Instrumentation.pptx&quot; &quot;E:\Jingtian\桌面\新建文件夹\Privacy-Preserving_Blockchain-Based_Federated_Learning_for_IoT_Devices.pdf&quot; &quot;E:\Jingtian\桌面\新建文件夹\easy_java&quot; &quot;E:\Jingtian\桌面\新建文件夹\（备份）斯坦福数据挖掘教程第三版.pdf&quot; &quot;E:\Jingtian\桌面\新建文件夹\《鸟哥的Linux私房菜-基础篇》第四版(1).pdf&quot; &quot;E:\Jingtian\桌面\新建文件夹\Blockchain_and_Federated_Learning_for_Privacy-Preserved_Data_Sharing_in_Industrial_IoT.pdf&quot; &quot;E:\Jingtian\桌面\新建文件夹\Decentralized_Privacy_Using_Blockchain-Enabled_Federated_Learning_in_Fog_Computing.pdf&quot;" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.ZipDemo (1)" />
+<<<<<<< HEAD
       <item itemvalue="Application.NumberDemo" />
       <item itemvalue="Application.FilePathDemo" />
       <item itemvalue="Application.ZipDemo" />
@@ -140,6 +157,21 @@
         <item itemvalue="Application.ZipDemo" />
         <item itemvalue="Application.StreamDemo" />
         <item itemvalue="Application.OptionalDemo" />
+=======
+      <item itemvalue="Application.TestDiningPhilosophers" />
+      <item itemvalue="Application.TestFoo" />
+      <item itemvalue="Application.FizzBuzzTest" />
+      <item itemvalue="Application.TestLeetCode" />
+      <item itemvalue="Application.ClassLoaderTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestDiningPhilosophers" />
+        <item itemvalue="Application.FizzBuzzTest" />
+        <item itemvalue="Application.TestFoo" />
+        <item itemvalue="Application.TestLeetCode" />
+        <item itemvalue="Application.ClassLoaderTest" />
+>>>>>>> 8fa1efe80149ee417cada6075a0b80b7c6251c97
       </list>
     </recent_temporary>
   </component>
@@ -160,8 +192,13 @@
       <workItem from="1705473012103" duration="9223000" />
       <workItem from="1705510991390" duration="208000" />
       <workItem from="1705560228539" duration="8581000" />
+<<<<<<< HEAD
       <workItem from="1705569287392" duration="47000" />
       <workItem from="1705581599165" duration="3410000" />
+=======
+      <workItem from="1709602659363" duration="5711000" />
+      <workItem from="1709619204511" duration="1305000" />
+>>>>>>> 8fa1efe80149ee417cada6075a0b80b7c6251c97
     </task>
     <servers />
   </component>

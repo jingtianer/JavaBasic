@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db24be6e-7baf-4062-a90c-cfb26173d626" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/leetcode/Tools.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/leetcode/TestBoundedBlockingQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/TestBoundedBlockingQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

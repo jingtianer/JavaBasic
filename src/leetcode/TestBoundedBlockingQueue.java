@@ -6,6 +6,9 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+import static leetcode.Tools.printf;
+import static leetcode.Tools.runCatching;
+
 class BoundedBlockingQueue {
     Semaphore consumer, producer;
     Lock mutex;
@@ -19,20 +22,33 @@ class BoundedBlockingQueue {
         mutex = new ReentrantLock();
     }
 
-    public void enqueue(int element) throws InterruptedException {
-        producer.acquire();
-        mutex.lock();
-        q.add(element);
-        mutex.unlock();
-        consumer.release();
+    public void enqueue(int element) {
+        try {
+            producer.acquire();
+            mutex.lock();
+            q.add(element);
+        } catch (Exception e) {
+            producer.release();
+            throw new RuntimeException(e);
+        } finally {
+            mutex.unlock();
+            consumer.release();
+        }
     }
 
-    public int dequeue() throws InterruptedException {
-        consumer.acquire();
-        mutex.lock();
-        int ret = q.remove(0);
-        mutex.unlock();
-        producer.release();
+    public int dequeue() {
+        int ret;
+        try {
+            consumer.acquire();
+            mutex.lock();
+            ret = q.remove(0);
+        } catch (Exception e) {
+            consumer.release();
+            throw new RuntimeException(e);
+        } finally {
+            mutex.unlock();
+            producer.release();
+        }
         return ret;
     }
 
@@ -41,85 +57,64 @@ class BoundedBlockingQueue {
     }
 }
 public class TestBoundedBlockingQueue {
+    static final int MIN_THREAD_NUM = 2;
+    static final int MAX_THREAD_NUM = 50;
+    static final int MIN_CAPACITY = 1;
+    static final int MAX_CAPACITY = 50;
+    static final int MIN_OP_NUM = 20;
+    static final int MAX_OP_NUM = 100;
+
+    static
+    Random random = new Random(System.currentTimeMillis());
+    static int produceTotal; // 生产者生产总数
+    static int consumerTotal; // 消费者总数
+    static void getOps(int[] producerNum, int[] consumerNum, int maxRemainNum) {
+        produceTotal = consumerTotal = 0;
+        for(int i = 0; i < producerNum.length; i++){
+            int opNum = random.nextInt(MIN_OP_NUM, MAX_OP_NUM + 1);
+            producerNum[i] = opNum;
+            produceTotal += opNum;
+        }
+        for(int i = consumerNum.length-1; produceTotal - maxRemainNum - consumerTotal > 0; i--) {
+            int opNum = random.nextInt((produceTotal - maxRemainNum - consumerTotal) / (i + 1), (produceTotal - maxRemainNum - consumerTotal) + 1);
+            consumerNum[i] = opNum;
+            consumerTotal += opNum;
+        }
+    }
     public static void main(String[] args) {
-        Random random = new Random(System.currentTimeMillis());
-        int threadNum = random.nextInt(2,10);
-        int capacity = random.nextInt(1,100);
-        List<Map.Entry<Integer, Boolean>> t_ops = null;
-        Map.Entry<Integer, Boolean> ok = Map.entry(0, false);
-        boolean hasFalse = false;
-        while(ok.getKey() == 0 || !ok.getValue() || !hasFalse) { //保证不是全true，不是全false
-            t_ops = new ArrayList<>(threadNum);
-            for(int i = 0; i < threadNum; i++){
-                boolean isProducer = random.nextBoolean();
-                t_ops.add(Map.entry(random.nextInt(5, 30), isProducer));
-                hasFalse = hasFalse || !isProducer;
-            }
-            ok = t_ops.stream()
-                    .reduce((left, right) -> {
-                        int sum = (left.getValue() ? left.getKey() : 0) + (right.getValue() ? right.getKey() : 0);
-                        return Map.entry(sum, left.getValue() || right.getValue());
-                    })
-                    .orElse(Map.entry(0, false));
-        }
-        int produceTotal = ok.getKey(); // 生产者生产总数
-        final List<Map.Entry<Integer, Boolean>> ops = t_ops;
-        System.out.println(produceTotal);
-        for(int i = 0; i < threadNum; i++) {
-            if(ops.get(i).getValue()) continue;
-            if(produceTotal == 0) {
-                ops.set(i, Map.entry(0, false));
-            } else {
-                int nums = random.nextInt(1, produceTotal+1); // 消费者消费数目随机，且不全为0
-                produceTotal -= nums;
-                ops.set(i, Map.entry(nums, false));
-            }
-        }
-        if(produceTotal > capacity) { // 生产数量-消费数量不能大于容量
-            for(int i = 0; i < threadNum; i++) {
-                if(!ops.get(i).getValue()) {
-                    ops.set(i, Map.entry(ops.get(i).getKey() + produceTotal - random.nextInt(0, capacity), false));
-                    break;
-                }
-            }
-        }
-        System.out.println(ops);
+        int threadNum = random.nextInt(MIN_THREAD_NUM, MAX_THREAD_NUM + 1);
+        int capacity = random.nextInt(MIN_CAPACITY, MAX_CAPACITY + 1);
+        int maxRemainNum = random.nextInt(0, capacity + 1);
+        int[] producerNum = new int[random.nextInt(1, threadNum)];
+        int[] consumerNum = new int[threadNum - producerNum.length];
+        getOps(producerNum, consumerNum, maxRemainNum);
+        System.out.printf("producerNum=%s\nconsumerNum=%s\nthreadNum=%d\ncapacity=%d\nproducerTotal=%d\nconsumerTotal=%d\nsize=%d\nmaxRemainNum=%d\n",
+                Arrays.toString(producerNum), Arrays.toString(consumerNum), threadNum, capacity, produceTotal, consumerTotal, produceTotal - consumerTotal, maxRemainNum);
         BoundedBlockingQueue boundedBlockingQueue = new BoundedBlockingQueue(capacity);
-        int result = 0;
         try(ExecutorService executorService = Executors.newFixedThreadPool(threadNum)) {
-            for(int i = 0; i < threadNum; i++) {
+            for(int i = 0; i < producerNum.length; i++) {
                 final int id = i;
-                if(ops.get(i).getValue()) {
-                    executorService.submit(()->{
-                        for(int j = 0; j < ops.get(id).getKey(); j++) {
-                            try {
-                                boundedBlockingQueue.enqueue(id);
-//                                System.out.println(Thread.currentThread().getName() + ", enqueue!");
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    });
-                    result += ops.get(id).getKey();
-                } else {
-                    executorService.submit(()->{
-                        for(int j = 0; j < ops.get(id).getKey(); j++) {
-                            try {
-                                boundedBlockingQueue.dequeue();
-//                                System.out.println(Thread.currentThread().getName() + ", dequeue!");
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    });
-                    result -= ops.get(id).getKey();
-                }
+                executorService.submit(runCatching(() -> {
+                    for(int j = 0; j < producerNum[id]; j++) {
+                        System.out.printf("%s, enqueue\n", Thread.currentThread().getName());
+                        boundedBlockingQueue.enqueue(id);
+                    }
+                }));
+            }
+            for(int i = 0; i < consumerNum.length; i++) {
+                final int id = i;
+                executorService.submit(runCatching(() -> {
+                    for(int j = 0; j < consumerNum[id]; j++) {
+                        int front = boundedBlockingQueue.dequeue();
+                        System.out.printf("%s, dequeue, front = %d\n", Thread.currentThread().getName(), front);
+                    }
+                }));
             }
         }
-        if(result == boundedBlockingQueue.size()) {
-            System.out.println("ok!, size = " + result);
+        if(produceTotal - consumerTotal == boundedBlockingQueue.size()) {
+            System.out.printf("ok!, size = %d\n", produceTotal - consumerTotal);
         } else {
-            System.out.printf("fail, you are foolish, correct size = %d, q.size = %d\n", result, boundedBlockingQueue.size());
+            throw new RuntimeException(printf("fail, you are foolish, correct size = %d, q.size = %d\n", produceTotal - consumerTotal, boundedBlockingQueue.size()));
         }
     }
 }

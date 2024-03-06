@@ -76,11 +76,12 @@ public class TestBoundedBlockingQueue {
             produceTotal += opNum;
         }
         for(int i = consumerNum.length-1; produceTotal - maxRemainNum - consumerTotal > 0; i--) {
-            int opNum = random.nextInt((produceTotal - maxRemainNum - consumerTotal) / (i + 1), (produceTotal - maxRemainNum - consumerTotal) + 1);
+            int opNum = random.nextInt((produceTotal - maxRemainNum - consumerTotal) / (i*i + 1), (produceTotal - maxRemainNum - consumerTotal) / (i + 1) + 1);
             consumerNum[i] = opNum;
             consumerTotal += opNum;
         }
     }
+
     public static void main(String[] args) {
         int threadNum = random.nextInt(MIN_THREAD_NUM, MAX_THREAD_NUM + 1);
         int capacity = random.nextInt(MIN_CAPACITY, MAX_CAPACITY + 1);
@@ -96,7 +97,7 @@ public class TestBoundedBlockingQueue {
                 final int id = i;
                 executorService.submit(runCatching(() -> {
                     for(int j = 0; j < producerNum[id]; j++) {
-                        System.out.printf("%s, enqueue\n", Thread.currentThread().getName());
+//                        System.out.printf("%s, enqueue\n", Thread.currentThread().getName());
                         boundedBlockingQueue.enqueue(id);
                     }
                 }));
@@ -106,7 +107,7 @@ public class TestBoundedBlockingQueue {
                 executorService.submit(runCatching(() -> {
                     for(int j = 0; j < consumerNum[id]; j++) {
                         int front = boundedBlockingQueue.dequeue();
-                        System.out.printf("%s, dequeue, front = %d\n", Thread.currentThread().getName(), front);
+//                        System.out.printf("%s, dequeue, front = %d\n", Thread.currentThread().getName(), front);
                     }
                 }));
             }

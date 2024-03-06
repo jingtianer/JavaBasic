@@ -47,13 +47,13 @@ public class TestBoundedBlockingQueue {
         int capacity = random.nextInt(1,100);
         List<Map.Entry<Integer, Boolean>> t_ops = null;
         Map.Entry<Integer, Boolean> ok = Map.entry(0, false);
-        boolean allFalse = true;
-        while(ok.getKey() == 0 || (!ok.getValue() && !allFalse)) { //保证不是全true，不是全false
+        boolean hasFalse = false;
+        while(ok.getKey() == 0 || !ok.getValue() || !hasFalse) { //保证不是全true，不是全false
             t_ops = new ArrayList<>(threadNum);
             for(int i = 0; i < threadNum; i++){
                 boolean isProducer = random.nextBoolean();
                 t_ops.add(Map.entry(random.nextInt(5, 30), isProducer));
-                allFalse = allFalse && !isProducer;
+                hasFalse = hasFalse || !isProducer;
             }
             ok = t_ops.stream()
                     .reduce((left, right) -> {

@@ -3,27 +3,35 @@ import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 class BoundedBlockingQueue {
     Semaphore consumer, producer;
+    Lock mutex;
     final private int capacity;
-    private LinkedList<Integer> q = new LinkedList<Integer>();
+    private LinkedList<Integer> q = new LinkedList<>();
 
     public BoundedBlockingQueue(int capacity) {
         this.capacity = capacity;
         consumer = new Semaphore(0);
         producer = new Semaphore(capacity);
+        mutex = new ReentrantLock();
     }
 
     public void enqueue(int element) throws InterruptedException {
         producer.acquire();
+        mutex.lock();
         q.add(element);
+        mutex.unlock();
         consumer.release();
     }
 
     public int dequeue() throws InterruptedException {
         consumer.acquire();
+        mutex.lock();
         int ret = q.remove(0);
+        mutex.unlock();
         producer.release();
         return ret;
     }
@@ -37,29 +45,42 @@ public class TestBoundedBlockingQueue {
         Random random = new Random(System.currentTimeMillis());
         int threadNum = random.nextInt(2,10);
         int capacity = random.nextInt(1,100);
-        List<Map.Entry<Integer, Boolean>> ops = new ArrayList<>(threadNum);
-        for(int i = 0; i < threadNum; i++)
-            ops.add(Map.entry(random.nextInt(5, 30), random.nextBoolean()));
-        System.out.println(ops);
-        int produceTotal = 0;
-        while(produceTotal == 0) {
-            produceTotal = ops.stream()
+        List<Map.Entry<Integer, Boolean>> t_ops = null;
+        Map.Entry<Integer, Boolean> ok = Map.entry(0, false);
+        boolean allFalse = true;
+        while(ok.getKey() == 0 || (!ok.getValue() && !allFalse)) { //保证不是全true，不是全false
+            t_ops = new ArrayList<>(threadNum);
+            for(int i = 0; i < threadNum; i++){
+                boolean isProducer = random.nextBoolean();
+                t_ops.add(Map.entry(random.nextInt(5, 30), isProducer));
+                allFalse = allFalse && !isProducer;
+            }
+            ok = t_ops.stream()
                     .reduce((left, right) -> {
                         int sum = (left.getValue() ? left.getKey() : 0) + (right.getValue() ? right.getKey() : 0);
-                        return Map.entry(sum, true);
+                        return Map.entry(sum, left.getValue() || right.getValue());
                     })
-                    .get()
-                    .getKey();
+                    .orElse(Map.entry(0, false));
         }
+        int produceTotal = ok.getKey(); // 生产者生产总数
+        final List<Map.Entry<Integer, Boolean>> ops = t_ops;
         System.out.println(produceTotal);
         for(int i = 0; i < threadNum; i++) {
             if(ops.get(i).getValue()) continue;
             if(produceTotal == 0) {
                 ops.set(i, Map.entry(0, false));
             } else {
-                int nums = random.nextInt(0, produceTotal);
+                int nums = random.nextInt(1, produceTotal+1); // 消费者消费数目随机，且不全为0
                 produceTotal -= nums;
                 ops.set(i, Map.entry(nums, false));
+            }
+        }
+        if(produceTotal > capacity) { // 生产数量-消费数量不能大于容量
+            for(int i = 0; i < threadNum; i++) {
+                if(!ops.get(i).getValue()) {
+                    ops.set(i, Map.entry(ops.get(i).getKey() + produceTotal - random.nextInt(0, capacity), false));
+                    break;
+                }
             }
         }
         System.out.println(ops);
@@ -73,7 +94,7 @@ public class TestBoundedBlockingQueue {
                         for(int j = 0; j < ops.get(id).getKey(); j++) {
                             try {
                                 boundedBlockingQueue.enqueue(id);
-                                System.out.println(Thread.currentThread().getName() + ", enqueue!");
+//                                System.out.println(Thread.currentThread().getName() + ", enqueue!");
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
@@ -85,7 +106,7 @@ public class TestBoundedBlockingQueue {
                         for(int j = 0; j < ops.get(id).getKey(); j++) {
                             try {
                                 boundedBlockingQueue.dequeue();
-                                System.out.println(Thread.currentThread().getName() + ", dequeue!");
+//                                System.out.println(Thread.currentThread().getName() + ", dequeue!");
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
@@ -96,9 +117,9 @@ public class TestBoundedBlockingQueue {
             }
         }
         if(result == boundedBlockingQueue.size()) {
-            System.out.println("ok!");
+            System.out.println("ok!, size = " + result);
         } else {
-            System.out.println("fail, you are foolish");
+            System.out.printf("fail, you are foolish, correct size = %d, q.size = %d\n", result, boundedBlockingQueue.size());
         }
     }
 }

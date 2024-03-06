@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db24be6e-7baf-4062-a90c-cfb26173d626" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/leetcode/FizzBuzzTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/leetcode/TestDiningPhilosophers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/leetcode/TestFoo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/leetcode/TestBoundedBlockingQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/leetcode/TestTrafficLight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/multithreading/ForkJoinDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/multithreading/ForkJoinDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,13 +50,14 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.TestDiningPhilosophers">
-    <configuration name="ClassLoaderTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="classLoaderDemo.ClassLoaderTest" />
+  <component name="RunManager" selected="Application.TestBoundedBlockingQueue">
+    <configuration name="FizzBuzzTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.FizzBuzzTest" />
       <module name="JavaBasic" />
+      <option name="PROGRAM_PARAMETERS" value="16" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="classLoaderDemo.*" />
+          <option name="PATTERN" value="leetcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -64,10 +65,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FizzBuzzTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.FizzBuzzTest" />
+    <configuration name="ForkJoinDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="multithreading.ForkJoinDemo" />
       <module name="JavaBasic" />
-      <option name="PROGRAM_PARAMETERS" value="16" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="multithreading.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestBoundedBlockingQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.TestBoundedBlockingQueue" />
+      <module name="JavaBasic" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="leetcode.*" />
@@ -91,8 +104,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFoo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.TestFoo" />
+    <configuration name="TestTrafficLight" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.TestTrafficLight" />
       <module name="JavaBasic" />
       <extension name="coverage">
         <pattern>
@@ -100,13 +113,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestLeetCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.TestLeetCode" />
-      <module name="JavaBasic" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,19 +133,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.ZipDemo (1)" />
+      <item itemvalue="Application.TestBoundedBlockingQueue" />
+      <item itemvalue="Application.TestTrafficLight" />
+      <item itemvalue="Application.ForkJoinDemo" />
       <item itemvalue="Application.TestDiningPhilosophers" />
-      <item itemvalue="Application.TestFoo" />
       <item itemvalue="Application.FizzBuzzTest" />
-      <item itemvalue="Application.TestLeetCode" />
-      <item itemvalue="Application.ClassLoaderTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestBoundedBlockingQueue" />
+        <item itemvalue="Application.TestTrafficLight" />
+        <item itemvalue="Application.ForkJoinDemo" />
         <item itemvalue="Application.TestDiningPhilosophers" />
         <item itemvalue="Application.FizzBuzzTest" />
-        <item itemvalue="Application.TestFoo" />
-        <item itemvalue="Application.TestLeetCode" />
-        <item itemvalue="Application.ClassLoaderTest" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +167,8 @@
       <workItem from="1705510991390" duration="208000" />
       <workItem from="1705560228539" duration="8581000" />
       <workItem from="1709602659363" duration="5711000" />
-      <workItem from="1709619204511" duration="1305000" />
+      <workItem from="1709619204511" duration="3877000" />
+      <workItem from="1709710423931" duration="7756000" />
     </task>
     <servers />
   </component>

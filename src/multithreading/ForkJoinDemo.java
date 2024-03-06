@@ -76,7 +76,7 @@ public class ForkJoinDemo {
         Random random = new Random();
         Integer[] numbers = new Integer[100000000];
         Arrays.setAll(numbers, (i) -> random.nextInt(0, 10000));
-        System.out.println("numbers=" + Arrays.toString(numbers));
+//        System.out.println("numbers=" + Arrays.toString(numbers));
         test(numbers, (n)-> n%2 == 0, 100000000);
         test(numbers, (n)-> n%2 == 0, 10000000);
         test(numbers, (n)-> n%2 == 0, 1000000);

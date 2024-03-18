@@ -72,6 +72,7 @@ public class GenericDemo {
                 Pair<? super Man> manPair = new Pair<Man>();
                 Pair<? extends Person> personnPair = new Pair<Man>();
                 Person first = personnPair.getFirst();
+
                 manPair.setFirst(new Man("", 18));
                 System.out.println(height2Weight.getClass());
                 System.out.println(nickName2Name.getClass());

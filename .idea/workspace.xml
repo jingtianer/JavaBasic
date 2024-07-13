@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db24be6e-7baf-4062-a90c-cfb26173d626" name="Changes" comment="leetcode, fix bugs">
-      <change afterPath="$PROJECT_DIR$/src/reflektion/ReflectDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/iterator_test/ConcurrentModification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kt_test/a/JavaClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kt_test/a/KtClass.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kt_test/b/JavaClass1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kt_test/b/KtObj.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +24,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Class" />
         <option value="Class" />
       </list>
     </option>
@@ -37,6 +46,7 @@
     "Application.FileLockTest.executor": "Run",
     "Application.ReflectDemo.executor": "Run",
     "Application.ZipDemo (1).executor": "Run",
+    "Kotlin.KtObjKt.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -50,17 +60,33 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "/Users/jingtian/IdeaProjects/java/JavaBasic/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.ConcurrentModification.executor": "Run",
+    "应用程序.JavaClass1.executor": "Run"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.ReflectDemo">
-    <configuration name="FileLockTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="filelock.FileLockTest" />
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/kt_test/b" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="kt_test.a" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="kt_test.a" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Kotlin.KtObjKt">
+    <configuration name="ConcurrentModification" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="iterator_test.ConcurrentModification" />
       <module name="JavaBasic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="filelock.*" />
+          <option name="PATTERN" value="iterator_test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -68,19 +94,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="JavaBasic" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReflectDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="reflektion.ReflectDemo" />
+    <configuration name="JavaClass1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kt_test.b.JavaClass1" />
       <module name="JavaBasic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="reflektion.*" />
+          <option name="PATTERN" value="kt_test.b.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,29 +147,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="KtObjKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kt_test.b.KtObjKt" />
+      <module name="JavaBasic" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.ZipDemo (1)" />
-      <item itemvalue="Application.ReflectDemo" />
-      <item itemvalue="Application.FileLockTest" />
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.TestFoo" />
-      <item itemvalue="Application.TestBoundedBlockingQueue" />
+      <item itemvalue="Kotlin.KtObjKt" />
+      <item itemvalue="应用程序.ZipDemo (1)" />
+      <item itemvalue="应用程序.JavaClass1" />
+      <item itemvalue="应用程序.ConcurrentModification" />
+      <item itemvalue="应用程序.TestBoundedBlockingQueue" />
+      <item itemvalue="应用程序.TestFoo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ReflectDemo" />
-        <item itemvalue="Application.FileLockTest" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.TestFoo" />
-        <item itemvalue="Application.TestBoundedBlockingQueue" />
+        <item itemvalue="Kotlin.KtObjKt" />
+        <item itemvalue="应用程序.JavaClass1" />
+        <item itemvalue="应用程序.ConcurrentModification" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -180,7 +204,11 @@
       <workItem from="1710665525540" duration="12000" />
       <workItem from="1715398421090" duration="348000" />
       <workItem from="1715398773138" duration="5000" />
-      <workItem from="1715398782166" duration="5586000" />
+      <workItem from="1715398782166" duration="6456000" />
+      <workItem from="1718939092192" duration="2684000" />
+      <workItem from="1719385682525" duration="13281000" />
+      <workItem from="1719557861492" duration="1273000" />
+      <workItem from="1720060893522" duration="3312000" />
     </task>
     <task id="LOCAL-00001" summary="leetcode, fix bugs">
       <option name="closed" value="true" />
